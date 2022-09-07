@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "onoff": "^6.0.3"
+    "onoff": "^6.0.3",
+    "serialport": "^10.4.0",
+    "thermalprinter": "^0.3.10"
   }
 }
