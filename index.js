@@ -36,14 +36,17 @@ async function printReceipt(receipt) {
 		serialPort.on('open',function() {
 			var printer = new Printer(serialPort, {
 				maxPrintingDots: 6,
-				heatingTime: 50,
-				heatingInterval: 4,
+				heatingTime: 70,
+				heatingInterval: 5,
 				commandDelay: 4,
 				chineseFirmware: true
 			});
 			printer.on('ready', function() {
 				printer
 					.printImage('image.png')
+					.printLine(" ")
+					.printLine(" ")
+					.printLine(" ")
 					.print(function() {
 						resolve();
 					});
@@ -57,9 +60,9 @@ async function makeReceipt(info, filePath) {
     const ctx = canvas.getContext('2d');
 
     ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, 384, 800);
+    ctx.fillRect(0, 0, 384, 850);
     ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, 30, 800);
+    ctx.fillRect(0, 0, 30, 850);
 
     // Draw Logo
     let image = await loadImageAsync('dao-logo-nav.png');
