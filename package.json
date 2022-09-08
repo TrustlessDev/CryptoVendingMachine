@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "canvas": "^2.10.1",
     "onoff": "^6.0.3",
+    "qrcode": "^1.5.1",
     "serialport": "^10.4.0",
     "thermalprinter": "^0.3.10"
   }
